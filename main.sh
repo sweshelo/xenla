@@ -15,6 +15,24 @@ function convert_symbol_to_keywords() {
     ">" ) echo "greater" ;;
     "." ) echo "period" ;;
     "," ) echo "comma" ;;
+    ";" ) echo "semicolon" ;;
+    ":" ) echo "colon" ;;
+    "|" ) echo "bar" ;;
+    "\\" ) echo "backslash" ;;
+    "=" ) echo "equal" ;;
+    "+" ) echo "plus" ;;
+    "-" ) echo "minus" ;;
+    "*" ) echo "asterisk" ;;
+    "%" ) echo "percent" ;;
+    "&" ) echo "ampersand" ;;
+    "!" ) echo "exclam" ;;
+    "(" ) echo "parenleft" ;;
+    ")" ) echo "parenright" ;;
+    "@" ) echo "at" ;;
+    "#" ) echo "numbersign" ;;
+    "$" ) echo "dollar" ;;
+    "^" ) echo "asciicircum" ;;
+    "~" ) echo "asciitilde" ;;
     * ) echo $symbol ;;
   esac
   return 0
@@ -56,6 +74,6 @@ for code in "${KEYCODES[@]}"; do
   i=$((i+1))
 done
 
-if [ "$SWITCH" == "" ]; then
+if [ "$SWITCH" != "" ]; then
   echo "keycode $SWITCH = Mode_switch"
 fi
